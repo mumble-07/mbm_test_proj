@@ -1,0 +1,17 @@
+<h1>EDIT PAGE </h1>
+
+<%= form_with scope: :article, method: :put, locale: true do |f| %>
+
+<div>
+  <th><%= f.label :Title %></th>
+  <th><%= f.text_field :title %></th>
+</div>
+<div>
+  <th><%= f.label :Lyrics%></th>
+  <th><%= f.text_field :lyrics %></th>
+</div>
+
+<div>
+  <%= f.submit :"Update" %>
+</div>
+<% end %>

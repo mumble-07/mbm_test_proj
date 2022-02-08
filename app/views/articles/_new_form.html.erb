@@ -1,0 +1,17 @@
+<h1>This is the form</h1>
+
+<%= form_with scope: :article, locale: true do |f| %>
+
+<div>
+  <th><%= f.label :Title %></th>
+  <th><%= f.text_field :title %></th>
+</div>
+<div>
+  <th><%= f.label :Lyrics%></th>
+  <th><%= f.text_field :lyrics %></th>
+</div>
+
+<div>
+  <%= f.submit :"Submit" %>
+</div>
+<% end %>

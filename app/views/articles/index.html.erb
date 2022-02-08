@@ -1,0 +1,15 @@
+<h1> ARTICLES </h1>
+
+<%= link_to "Create", new_article_path %>
+
+<% @articles.each do |arti| %>
+<table>
+<tr> 
+  <td><%=arti.id%></td>
+  <td> <%=arti.title%></td>
+  <td> <%=arti.lyrics%></td>
+  <td><%= link_to "EDIT", edit_article_path(arti.id) %></td>
+  <td><%= link_to "Delete", delete_article_path(arti.id), method: :delete, data: { confirm: "Are you sure?" }  %></td>
+</tr>
+</table>
+<% end %>
